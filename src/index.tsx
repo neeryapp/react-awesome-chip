@@ -182,8 +182,9 @@ export const useFilterView = <T,>(
     )
   }
 
-  return [idsOn, FilterView] as [
+  return [idsOn, setIdsOn, FilterView] as [
     T[],
+    React.Dispatch<React.SetStateAction<T[]>>,
     FC<{ onClick?: Action1<T[]>; className?: string }>
   ]
 }
